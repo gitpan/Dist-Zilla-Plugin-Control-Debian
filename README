@@ -3,13 +3,15 @@ NAME
     distribution
 
 VERSION
-    version 0.001
+    version 0.002
 
 ATTRIBUTES
   file_name
      file_name=debian/control
     You will not need to change this from the default.
 
+  maintainer_email
+  maintainer_name
   priority
      priority=optional
 

@@ -65,7 +65,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::Control::Debian" : {
          "file" : "lib/Dist/Zilla/Plugin/Control/Debian.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -80,7 +80,7 @@
          "web" : "https://github.com/shantanubhadoria/dist-zilla-plugin-control-debian"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_contributors" : [
       "Shantanu <shantanu@cpan.org>"
    ]

@@ -30,7 +30,7 @@ no_index:
 provides:
   Dist::Zilla::Plugin::Control::Debian:
     file: lib/Dist/Zilla/Plugin/Control/Debian.pm
-    version: 0.001
+    version: 0.002
 requires:
   Dist::Zilla::Role::FileGatherer: 0
   Moose: 0
@@ -44,6 +44,6 @@ resources:
   bugtracker: https://github.com/shantanubhadoria/dist-zilla-plugin-control-debian/issues
   homepage: https://metacpan.org/release/Dist-Zilla-Plugin-Control-Debian
   repository: git://github.com/shantanubhadoria/dist-zilla-plugin-control-debian.git
-version: 0.001
+version: 0.002
 x_contributors:
   - 'Shantanu <shantanu@cpan.org>'

@@ -13,7 +13,7 @@ package Dist::Zilla::Plugin::Control::Debian;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 # Dependencies
 
@@ -29,6 +29,24 @@ has file_name => (
     is      => 'ro',
     isa     => 'Str',
     default => 'debian/control',
+);
+
+
+has 'maintainer_email' => (
+    is      => 'rw',
+    isa     => 'Str',
+    default => defined( $ENV{'DEBEMAIL'} )
+    ? $ENV{'DEBEMAIL'}
+    : 'cpan@example.com'
+);
+
+
+has 'maintainer_name' => (
+    is      => 'rw',
+    isa     => 'Str',
+    default => defined( $ENV{'DEBFULLNAME'} )
+    ? $ENV{'DEBFULLNAME'}
+    : 'CPAN Author'
 );
 
 
@@ -77,6 +95,8 @@ Desciprion: " . $self->zilla->abstract;
     return $content;
 }
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
 1;
 
 __END__
@@ -89,7 +109,7 @@ Dist::Zilla::Plugin::Control::Debian - Add a debian/control file to your distrib
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 ATTRIBUTES
 
@@ -97,6 +117,10 @@ version 0.001
 
  file_name=debian/control
 You will not need to change this from the default.
+
+=head2 maintainer_email
+
+=head2 maintainer_name
 
 =head2 priority
 
