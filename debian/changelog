@@ -1,0 +1,5 @@
+dist-zilla-plugin-control-debian (0.001) stable; urgency=low
+  * First Commit 
+
+ -- Shantanu Bhadoria <shantanu@cpan.org>  Sat, 05 Oct 2013 11:14:52 -0000
+
